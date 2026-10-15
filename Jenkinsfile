@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -10,13 +11,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install -r requirements.txt'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Python\\bin\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Run PyTest') {
             steps {
-                bat 'python -m pytest -v -s --junitxml=pytest-results.xml'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Python\\bin\\python.exe" -m pytest -v -s --junitxml=pytest-results.xml'
             }
         }
     }
